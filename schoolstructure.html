@@ -1,0 +1,211 @@
+<html>
+<head>
+<title>about</title>
+<style type="text/css">
+	<!--
+body {
+	margin: 0;  padding: 0;  margin-bottom: 15px;  margin-top: 8px;
+	background: #77b;
+	
+}
+body, td {
+	font: 14px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;font-color:white;
+
+	}
+
+#subTitle {
+	background: #000;  color: #fff;  padding: 4px;  font-weight: bold; 
+	}
+
+#siteNavigation a, #siteNavigation .current {
+	font-weight: bold;  color: #448;
+	}
+#siteNavigation a:link    { text-decoration: none; }
+#siteNavigation a:visited { text-decoration: none; }
+
+#siteNavigation .current { background-color: #ccd; }
+
+#siteNavigation a:hover   { text-decoration: none;  background-color: #fff;  color: #000; }
+#siteNavigation a:active  { text-decoration: none;  background-color: #ccc; }
+
+
+a:link    { text-decoration: none;  color: #00f; }
+a:visited { text-decoration: none;  color: #000; }
+a:hover   { text-decoration: underline;  color: #c00; }
+a:active  { text-decoration: none; }
+
+#pageContent {
+	clear: both;
+	border-bottom: 6px solid #000;
+	padding: 10px;  padding-top: 20px;
+	line-height: 1.65em;
+	background-image: url(back.jpg);
+	background-repeat: no-repeat;
+	background-position: top right;
+	}
+
+#pageContent, #siteNavigation {
+	background-color: #B0B0B0;
+	}
+.imgLeft  { float: left;   margin-right: 10px;  margin-bottom: 10px; }
+.imgRight { float: right;  margin-left: 10px;   margin-bottom: 10px; }
+
+hr { height: 1px;  color: #000;  background-color: #000;  margin-bottom: 15px; }
+
+h1 { margin: 0;  font-weight: bold;  font-size: 2em; }
+h2 { margin: 0;  font-weight: bold;  font-size: 1.6em; }
+h3 { margin: 0;  font-weight: bold;  font-size: 1.3em; }
+h4 { margin: 0;  font-weight: bold;  font-size: 1.18em; }
+
+.blak { background-color: #000; }
+.hide { display: none; }
+.tableWidth { min-width: 400px; }
+
+table{font-size:80%;background:gray;table-collapse:collapse;color:white}
+td.menu{background:silver}
+table.menu
+{
+font-size:100%;
+position:absolute;
+visibility:hidden;
+}
+
+
+
+// -->
+</style>
+<script type="text/javascript"> 
+function searchfield_focus(obj)
+{
+obj.style.color=""
+obj.style.fontStyle=""
+if (obj.value=="Search jimma university community school.com")
+	{
+	obj.value=""
+	}
+}
+///   sliding images/////
+
+var image1=new Image()
+image1.src="chem1.jpg"
+var image2=new Image()
+image2.src="chem2.jpg"
+var image3=new Image()
+image3.src="chem6.jpg"
+
+//variable that will increment through the images
+var step=1
+function slideit(){
+//if browser does not support the image object, exit.
+if (!document.images)
+return
+document.images.slide.src=eval("image"+step+".src")
+if (step<3)
+step++
+else
+step=1
+//call function "slideit()" every 2.5 seconds
+setTimeout("slideit()",1500)
+}
+slideit()
+function showmenu(elmnt)
+{
+document.getElementById(elmnt).style.visibility="visible";
+}
+function hidemenu(elmnt)
+{
+document.getElementById(elmnt).style.visibility="hidden";
+}
+</script>
+</head>
+<body>
+<center>
+<form style="position:absolute; top:52px; right:165px; font-size:10px; width: 458px;" method="get" name="searchform" action="http://www.google.com/search" target="_blank">
+  <select name="qklnk" size="0"  lang="en" onChange="window.open(this.options[this.selectedIndex].value,'_blank')">
+    <option value=""selected="selected">-select more links-</option>
+    <option value="http://www.ju.edu.et/">Jimma University</option>
+    <option value="http://www.ju.edu.et/am/philosophy-jimma-university-community-based-education">JU Comunity Based Education</option>
+	 <option value="http://jc-schools.net/tutorials/tools/science-hs.html">Tutorials</option>
+	   <option value="http://www.imarksweb.net/book/new+national+university+entrance+exam+for+ethiopia+for+2011/">previoues enterance exams</option>
+	  <option value="visionmission.html">Vision and Mission of JUCS</option> 
+	     <option value="externalRegister.html">Register to JUCS(external)</option> 
+		 <option value="studRegister.html">Register to JUCS(Internal)</option> 
+  </select>
+ 
+  <input onFocus="searchfield_focus(this)" style="width:128px;color:#FFFFFF;font-style:italic;" type="text" name="as_q" size="20" value="" />
+  <input type="submit" value="Search" title="Search">
+</form>
+<img src="JUCS.jpg"align="middle"alt="JUCS.jpg" width="1075" height="84"title="JUCS logo" /><span style="position:absolute;top:51px;right:140px;font-size:10px;">
+
+</span><br/>
+</center>
+<center><font color="white">
+<table width="1074" border="7">
+<td width="42" ><a href="index.html">Home</a></td>
+<td width="73"  onmouseover="showmenu('student')" onMouseOut="hidemenu('student')">&nbsp;&nbsp;&nbsp;&nbsp;<a href="">Student</a>
+<table class="menu" id="student" width="116">
+   <tr><td class="menu"><a href="stadmin.html">Administration</a></td></tr>
+   <tr><td class="menu"><a href="stunion.html">Student Union</a></td></tr>
+   <tr><td class="menu"><a href="stclub.html">Clubs</a></td></tr>
+  
+   </table>
+
+<td width="67"onmouseover="showmenu('service')" onMouseOut="hidemenu('service')"><a href="">Services</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <table class="menu" id="service" width="86">
+   <tr><td class="menu"><a href="library.html">Library</a></td></tr>
+   <tr><td class="menu"><a href="ict.html">ICT</a></td></tr>
+   <tr><td class="menu"><a href="tutorial.html">Tutorials</a></td></tr>
+
+   </table>
+</td>
+<td width="95" onMouseOver="showmenu('academic')" onMouseOut="hidemenu('academic')"><a href="">Academics</a>
+<table class="menu" id="academic" width="96">
+   <tr><td class="menu"><a href="gradeLevel.html">Grade Level</a></td></tr>
+   <tr><td class="menu"><a href="staff.html">Staff</a></td></tr>   
+   </table>
+       <td width="104"> <a href="vacancy.html">Vacancy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<td width="88" onMouseOver="showmenu('about')" onMouseOut="hidemenu('about')">
+<a href="">About</a>
+<table class="menu" id="about" width="156">
+   <tr><td class="menu"><a href="history.html">Historical Background</a></td></tr>
+   <tr><td class="menu"><a href="schoolstructure.html">School Structure</a></td></tr>
+   <tr><td class="menu"><a href="visionmission.html">Vission and Mission</a></td></tr>   
+   <tr><td class="menu"><a href="hodmessage.html">Director Message</a></td></tr>
+   </table>
+</td>
+<td width="125">&nbsp;&nbsp;&nbsp;&nbsp;<a href="contact.html">Contact Us</a></td>
+<td width="109">&nbsp;&nbsp;&nbsp;<a href="login.html">My Account</a></td>
+</table></font></center>
+<center><table width="1075">
+<tr>
+<td width="199"height="451" bgcolor="#66cc99"><table border="">
+<tr bgcolor="#69cc98"><th>About</th></tr>
+<tr>
+<td>  
+        <ul ><li><a href="history.html" title="">Historical Background</a></li>
+<li><a href="schoolstructure.html" title="">School Structure</a></li>
+<li><a href="visionmission.html" title="" class="active">Vision and Mission</a></li>
+<li><a href="hodmessage.html" title="">Director Message </a></li>
+</ul>    
+  		
+	  </td></tr></table></td>
+	  <td width="864"height="451">
+
+						<h4></h4> <div>  <div >
+
+                    <div><p><strong></strong></p>
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;"></p>
+ <p style="text-align:justify;">&nbsp;&nbsp;The page under conistruction.........</p>
+ <p style="text-align:justify;"></p><br><br><br></p>
+</div>
+      </div>
+</div>			
+
+ </table></center>
+
+</div>
+</td></tr></table></center>
+</body>
+
+</html>
